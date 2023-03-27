@@ -18,8 +18,10 @@
 # print(bruce.weapom)
 
 class Cow():
-    weight = ''
-    sound = 'my-my'
+    def __init__(self, weight, sound='my-my'):
+        self.weight = weight
+        self.sound = sound
+
     def eat(self, food):
         self.weight -= food
 
@@ -39,8 +41,12 @@ class Sheep():
         self.weight -= food
 
 class Chicken():
-    weight = ''
-    sound = 'ko-ko'
+    def __init__(self, weight=0, sound='ko-ko', agg=0):
+        self.weight = ''
+        self.sound = 'ko-ko'
+        self.agg = agg
+
+
     def eat(self, food):
         self.weight -= food
 
@@ -58,3 +64,9 @@ class Duck():
     sound = 'cry-cry'
     def eat(self, food):
         self.weight -= food
+
+
+koko = Chicken(agg=20)
+
+print(koko.agg)
+ 
